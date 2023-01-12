@@ -1,8 +1,8 @@
 -- Selezionare tutti gli studenti iscritti al Corso di Laurea in Economia
-
+SELECT * FROM `degrees` INNER JOIN `students` ON degrees.id = students.degree_id WHERE 1 AND degrees.name LIKE '%economia%';
 
 -- Selezionare tutti i Corsi di Laurea Magistrale del Dipartimento di Neuroscienze
-
+SELECT * FROM `degrees` INNER JOIN departments ON degrees.department_id = departments.id WHERE degrees.level LIKE "magistrale" AND departments.name LIKE "%Neuroscienze%";
 
 -- Selezionare tutti i corsi in cui insegna Fulvio Amato (id=44)
 
